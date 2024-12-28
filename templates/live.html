@@ -9,6 +9,8 @@
         {% for j in range(25) %}
             {% if game.world[i][j] %}
                 <td class="cell living-cell"></td>
+            {% elif (not game.world[i][j]) and game.old_world[i][j] %}
+                <td class="cell dead-cell"></td>
             {% else %}
                 <td class="cell"></td>
             {% endif %}
